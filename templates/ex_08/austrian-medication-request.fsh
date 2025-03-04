@@ -20,4 +20,4 @@ Description: "FHIR Base Profile for Medication Data in Austria"
 * . ^base.max = "*"
 * medicationReference only Reference($austrian-medication)
 * medicationReference ^sliceName = "medicationReference"
-* subject only Reference($austrian-ips-patient)
+//* subject only Reference($austrian-ips-patient)

@@ -7,9 +7,52 @@ presentation:
 # Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides* mit dem IG Publisher
 ***
 ### Andreas Schuler & Oliver Krauss
-#### *12.03.2024*
-### *HL7 Austria Jahrestagung 2024*
+#### *04.03.2025*
+### *HL7 Austria Jahrestagung 2025*
 
+<!-- .slide -->
+# Einführung &ndash; *FHIR Profiling*
+## Motivation
+***
+FHIR Spezifikation orientiert sich an dem Pareto-Prinzip (80/20-Regel)
+- 80% der Anwendungsfälle werden durch Basis von FHIR abgebildet
+- 20% durch Erweiterungen
+
+Viele unterschiedliche Anwendungsfälle im Gesundheitswesen
+- Basis-Set an *Ressourcen* und *Interaktionen*
+- Erweitern der FHIR-Spezifikation, um spezifische Anwendungsfälle abzubilden
+
+&rarr; Ausgangsbasis für das Profiling von FHIR ist das Conformance-Modul (siehe http://hl7.org/fhir/conformance-module.html)
+
+<!-- .slide -->
+# Einführung &ndash; *FHIR Profiling*
+## Was ist FHIR Profiling?
+***
+- *Ressourcen* sind die grundlegenden Bausteine, die *Spezifkation* kategoriesiert diese und legt deren Bedeutung fest
+- Durch Kombination der Bausteine können konkrete Lösungen erstellt werden
+![mit-ig.png](ohne-ig.png)
+
+
+<!-- .slide -->
+# Einführung &ndash; *FHIR Profiling*
+## Was ist FHIR Profiling
+***
+- Durch einen *Implementierungsleitfaden* werden Regeln für die Kombination und das Zusammenspiel der Bausteine definiert für einen spezifischen Anwendungsfall
+![mit-ig.png](mit-ig.png)
+
+<!-- .slide -->
+# Einführung &ndash; *FHIR Profiling*
+## Was ist FHIR Profiling
+***
+Implementierungsleitfäden sind Pakete bestehend aus maschinell-verarbeitbaren (*Ressourcen*) und Menschen-lesbaren, narrativen (HTML, Markdown, etc.) Inhalten
+Mittels *Ressourcen* werden in einem Implementierungsleitfaden festgelegt:
+- *Terminologien:* CodeSystem, ValueSet und Concept Maps
+- *Regeln für Inhalte:* StructureDefinition, Extensions, Mappings (FHIR <> CDA)
+- *Struktur und Aufbau der API:* CapabilityStatement, OperationDefinition, zusätzlich SearchParameter
+- *Clinical Logic:* Questionnaire, LogicLibrary und MeasureDefinition
+- *Testunterstützung:* TestScript
+- *Beispiele*
+- *Neu* – Actors, Requirements, Testplan
 
 <!-- .slide -->
 # Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
@@ -207,6 +250,42 @@ template =  hl7.at.fhir.template#current
 # Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
 ## Beispiel International Patient Summary (IPS)
 ***
+### Einbettung von UML-Diagrammen
+Der IG-Publisher erlaubt es PlantUML Diagramme in einen IG einzubetten (vgl. https://plantuml.com/de/)
+- Ein PlantUML-Diagramm wird im Verzeichnis `input/image-sources` abgelegt.
+```bash
+/ig-ips-at
+    ├── input
+      ├── image-sources
+        ├── sequence.plantuml
+```
+In der Datei `index.md` wird das Diagramm wie folgt eingebettet
+```
+{% include sequence.svg %}
+```
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_16](./templates/ex_16/)
+
+<!-- .slide -->
+# Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
+## Beispiel International Patient Summary (IPS)
+***
+### Einbettung von SQL-Abfragen
+Ein IG speichert Inhalte die im *Implementation Guide* dargestellt werden in einer SQLite-Datenbank.
+```bash
+/ig-ips-at
+    ├── output
+      ├── package.db
+```
+Über die Einbettung von Macros können SQL-Queries an die Datenbank abgesetzt werden
+```sql
+{% sql select Type, Url from Resources %}
+```
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_17](./templates/ex_17/)
+
+<!-- .slide -->
+# Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
+## Beispiel International Patient Summary (IPS)
+***
 ### Abhängigkeiten zwischen Implementierungsleitfäden
 Ein Implementierungsleitfaden kann auf Basis eines bestehenden Implementierungsleitfadens aufgebaut werden.
 - Abhängigkeiten werden in einer zentralen FHIR-Registry verwaltet &rarr; siehe http://fhir.org/guides/registry/
@@ -270,7 +349,7 @@ Description: "An example of a patient with a license to krill."
 * birthDate = "1905-08-23"
 ```
 
-<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_05/ppatient.fsh](./templates/ex_05/patient.fsh)
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_05/patient.fsh](./templates/ex_05/patient.fsh)
 
 <!-- .slide -->
 # Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
@@ -282,7 +361,7 @@ Description: "An example of a patient with a license to krill."
 
 ```bash
 /.fhir/packages
-    ├── HL7ATCoreProfiles#4.0.1
+    ├── hl7.at.fhir.core.r4#2.0.0
       ├── package
         ├── // Inhalt der package.tgz Datei hier entpacken
       ├── usage.ini
@@ -293,7 +372,7 @@ Description: "An example of a patient with a license to krill."
 ```yaml
 dependencies:
   hl7.fhir.uv.ips: current
-  HL7ATCoreProfiles: 4.1.0
+  hl7.at.fhir.core.r4: 2.0.0
 ```
 
 <span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_06/sushi-config.yaml](./templates/ex_06/sushi-config.yaml)
@@ -369,7 +448,7 @@ Description: "FHIR Base Profile for Medication Data in Austria"
 ```
 
 
-<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_05/](./templates/ex_05/)
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_08/](./templates/ex_08/)
 
 <!-- .slide -->
 # Erstellen von HL7&reg; FHIR&reg; *ImplementationGuides*
