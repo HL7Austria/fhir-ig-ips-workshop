@@ -1,0 +1,91 @@
+<mxfile host="Electron" modified="2025-03-04T09:27:14.027Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="OiweDno9zHPKs1yWQOx8" version="22.1.2" type="device">
+  <diagram name="Seite-1" id="fJoK6bcIXJP_FpK-E2zX">
+    <mxGraphModel dx="757" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-1" value="Patient" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="140" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-14" value="&amp;lt;&amp;lt;profile&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="aS4tSwy7kubwpsi4gjSB-1">
+          <mxGeometry y="29" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;" edge="1" parent="1" source="aS4tSwy7kubwpsi4gjSB-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="180" />
+              <mxPoint x="340" y="180" />
+              <mxPoint x="340" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-10" value="parent" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aS4tSwy7kubwpsi4gjSB-5">
+          <mxGeometry x="-0.0911" y="4" relative="1" as="geometry">
+            <mxPoint x="46" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-4" value="PatientUVIps" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="140" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-13" value="&amp;lt;&amp;lt;profile&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="aS4tSwy7kubwpsi4gjSB-4">
+          <mxGeometry y="29" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endSize=16;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="aS4tSwy7kubwpsi4gjSB-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="119" as="targetPoint" />
+            <mxPoint x="600" y="250" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="550" y="180" />
+              <mxPoint x="440" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-11" value="parent" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aS4tSwy7kubwpsi4gjSB-7">
+          <mxGeometry x="-0.0744" relative="1" as="geometry">
+            <mxPoint x="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-6" value="at-core-patient&lt;button style=&quot;font-family: inherit; margin: 0px; line-height: inherit; appearance: button; cursor: pointer; height: 14px; width: 17px; background-image: url(&amp;quot;../ico/noun_copy to clipboard_1669410.png&amp;quot;); background-size: 22px; padding: 0px; border-width: 0px; background-color: transparent; visibility: visible;&quot; data-original-title=&quot;Click to copy URL&quot; data-clipboard-text=&quot;http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1/StructureDefinition/at-core-patient&quot; class=&quot;btn-copy&quot; title=&quot;&quot;&gt;&lt;/button&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="480" y="250" width="140" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-15" value="&amp;lt;&amp;lt;profile&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="aS4tSwy7kubwpsi4gjSB-6">
+          <mxGeometry y="29" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" edge="1" parent="1" source="aS4tSwy7kubwpsi4gjSB-8" target="aS4tSwy7kubwpsi4gjSB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-12" value="parent" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aS4tSwy7kubwpsi4gjSB-9">
+          <mxGeometry x="-0.1724" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-8" value="AustrianIPSPatient" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="150" y="420" width="140" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-19" value="&amp;lt;&amp;lt;profile&amp;gt;&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="aS4tSwy7kubwpsi4gjSB-8">
+          <mxGeometry y="29" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-16" value="Imposed Profiles" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="150" y="479" width="140" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="aS4tSwy7kubwpsi4gjSB-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-18" value="references" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aS4tSwy7kubwpsi4gjSB-17">
+          <mxGeometry x="-0.3266" y="-4" relative="1" as="geometry">
+            <mxPoint x="-9" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-20" value="hl7.at.fhir.core" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="aS4tSwy7kubwpsi4gjSB-21" value="hl7.fhir.uv.ips&lt;button style=&quot;font-family: inherit; margin: 0px; line-height: inherit; appearance: button; cursor: pointer; height: 14px; width: 17px; background-image: url(&amp;quot;../ico/noun_copy to clipboard_1669410.png&amp;quot;); background-size: 22px; padding: 0px; border-width: 0px; background-color: transparent; visibility: visible;&quot; data-original-title=&quot;Click to copy URL&quot; data-clipboard-text=&quot;http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips&quot; class=&quot;btn-copy&quot; title=&quot;&quot;&gt;&lt;/button&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="70" y="200" width="320" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -151,6 +151,35 @@ template =  hl7.at.fhir.template#current
 
 <span style="border-radius: 3px;background-color:green; padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&check;</span> Ein minimaler Implementierungsleitfaden wurde erstellt, die Struktur, narrativen Teile sowie die erstellte Ressource werden im gerenderten Leitfaden dargestellt.  
 
+### Einbettung von UML-Diagrammen
+Der IG-Publisher erlaubt es PlantUML Diagramme in einen IG einzubetten (vgl. https://plantuml.com/de/)
+- Ein PlantUML-Diagramm wird im Verzeichnis `input/image-sources` abgelegt.
+```bash
+/ig-ips-at
+    ├── input
+      ├── image-sources
+        ├── sequence.plantuml
+```
+In der Datei `index.md` wird das Diagramm wie folgt eingebettet
+```
+{% include sequence.svg %}
+```
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_16](./templates/ex_16/)
+
+### Einbettung von SQL-Abfragen
+Ein IG speichert Inhalte die im *Implementation Guide* dargestellt werden in einer SQLite-Datenbank.
+```bash
+/ig-ips-at
+    ├── output
+      ├── package.db
+```
+Über die Einbettung von Macros können SQL-Queries an die Datenbank abgesetzt werden
+```sql
+{% sql select Type, Url from Resources %}
+```
+<span style="border-radius: 3px;background-color:rgba(17, 173, 221, 1); padding:2px 6px 2px 6px;color:#FFF;font-family: Panic Sans, Consolas, monospace;">&#9999;</span> siehe Vorlage unter [templates/ex_17](./templates/ex_17/)
+
+
 ### Abhängigkeiten zwischen Implementierungsleitfäden
 - Ein Implementierungsleitfaden kann auf Basis eines bestehenden Implementierungsleitfadens aufgebaut werden. Dazu kann in der Datei `sushi-config.yaml` eine Abhängigkeit auf einen anderen Leitfaden ergänzt werden.
 
